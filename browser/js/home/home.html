@@ -1,3 +1,9 @@
 <section id="home">
-    <p>{{hello}}</p>
+    <form class="simple-form">
+    	URL: <input type="text" ng-model="projectInfo.url" />
+    	<input type="submit" ng-click="scrapeUrl(projectInfo)" value="Scrape Url"/>
+    </form>
+    <pre> projectInfo = {{projectInfo | json}} </pre>
+    <pre> inputFields = {{inputFields | json}}</pre>
+
 </section>

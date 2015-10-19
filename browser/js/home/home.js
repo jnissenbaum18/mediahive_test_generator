@@ -7,8 +7,19 @@ app.config(function ($stateProvider) {
 });
 
 app.controller('homeCtrl', function ($scope, ScraperFactory) {
-	ScraperFactory.scrapeUrl().then(function (response) {
-		$scope.hello = response
-	})
+
+	// http://www.imdb.com/title/tt1229340/
+
+	$scope.projectInfo = {
+		url: ''
+	}
+
+	$scope.scrapeUrl = function (projectInfo) {
+		ScraperFactory.scrapeUrl(projectInfo).then(function (inputFields) {
+			$scope.inputFields = inputFields
+		})
+	}
+
+	
 
 });

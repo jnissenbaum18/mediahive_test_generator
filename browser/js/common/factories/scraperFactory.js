@@ -1,9 +1,9 @@
 app.factory('ScraperFactory', function ($http) {
 	return {
-		scrapeUrl: function () {
-			return $http.get('/api/scraper')
-				.then(function (response) {
-					return response.data
+		scrapeUrl: function (projectInfo) {
+			return $http.post('/api/scraper', projectInfo )
+				.then(function (inputFields) {
+					return inputFields.data
 				})
 		}
 	}

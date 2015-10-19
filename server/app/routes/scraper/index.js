@@ -5,12 +5,11 @@ var router = require('express').Router();
 var Promise = require('bluebird');
 module.exports = router;
 
-router.get('/', function (req, res, next) {
+router.post('/', function (req, res, next) {
 
-	var url = 'http://www.imdb.com/title/tt1229340/';
-
-	request(url, function (error, response, html) {	
+	request(req.body.url, function (error, response, html) {	
 		if(!error) {
+
 			var $ = cheerio.load(html)
 
 			var title, release, rating;
