@@ -1,0 +1,42 @@
+17:21:10.011 INFO - Launching a standalone Selenium Server
+Setting system property webdriver.chrome.driver to ./bin/chromedriver
+17:21:10.250 INFO - Java: Oracle Corporation 25.65-b01
+17:21:10.250 INFO - OS: Mac OS X 10.10.2 x86_64
+17:21:10.338 INFO - v2.48.0, with Core v2.48.0. Built from revision 41bccdd
+17:21:10.635 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+registration capabilities Capabilities [{ensureCleanSession=true, browserName=internet explorer, version=, platform=WINDOWS}] does not match the current platform MAC
+17:21:10.636 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
+registration capabilities Capabilities [{browserName=MicrosoftEdge, version=, platform=WINDOWS}] does not match the current platform MAC
+17:21:10.636 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+17:21:10.636 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+17:21:11.382 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+17:21:11.382 INFO - Selenium Server is up and running
+17:21:12.345 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Nightwatch / Example, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+17:21:12.386 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Nightwatch / Example, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.20.353124 (035346203162d32c80f1dce587c8154a1efa0c3b) on port 43158
+Only local connections are allowed.
+17:22:04.550 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Nightwatch / Example, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+17:22:04.710 INFO - Executing: [get: http://www.google.com])
+17:22:10.693 INFO - Done: [get: http://www.google.com]
+17:22:10.732 INFO - Executing: [find elements: By.cssSelector: body])
+17:22:12.212 INFO - Done: [find elements: By.cssSelector: body]
+17:22:12.217 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on MAC (4ed37ec0fb630d3bafc6401dff5942e6)] -> css selector: body]])
+17:22:12.292 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on MAC (4ed37ec0fb630d3bafc6401dff5942e6)] -> css selector: body]]
+17:22:12.324 INFO - Executing: [find element: By.cssSelector: input[type=text]])
+17:22:12.342 INFO - Done: [find element: By.cssSelector: input[type=text]]
+17:22:12.347 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on MAC (4ed37ec0fb630d3bafc6401dff5942e6)] -> css selector: input[type=text]], [n, i, g, h, t, w, a, t, c, h]])
+17:22:13.283 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on MAC (4ed37ec0fb630d3bafc6401dff5942e6)] -> css selector: input[type=text]], [n, i, g, h, t, w, a, t, c, h]]
+17:22:13.289 INFO - Executing: [find elements: By.cssSelector: button[name=btnG]])
+17:22:13.494 INFO - Done: [find elements: By.cssSelector: button[name=btnG]]
+17:22:13.498 INFO - Executing: [is displayed: 2 [[ChromeDriver: chrome on MAC (4ed37ec0fb630d3bafc6401dff5942e6)] -> css selector: button[name=btnG]]])
+17:22:13.514 INFO - Done: [is displayed: 2 [[ChromeDriver: chrome on MAC (4ed37ec0fb630d3bafc6401dff5942e6)] -> css selector: button[name=btnG]]]
+17:22:13.561 INFO - Executing: [find element: By.cssSelector: button[name=btnG]])
+17:22:13.579 INFO - Done: [find element: By.cssSelector: button[name=btnG]]
+17:22:13.583 INFO - Executing: [click: 2 [[ChromeDriver: chrome on MAC (4ed37ec0fb630d3bafc6401dff5942e6)] -> css selector: button[name=btnG]]])
+17:22:13.674 INFO - Done: [click: 2 [[ChromeDriver: chrome on MAC (4ed37ec0fb630d3bafc6401dff5942e6)] -> css selector: button[name=btnG]]]
+17:22:14.684 INFO - Executing: [find element: By.cssSelector: #main])
+17:22:15.060 INFO - Done: [find element: By.cssSelector: #main]
+17:22:15.067 INFO - Executing: [get text: 3 [[ChromeDriver: chrome on MAC (4ed37ec0fb630d3bafc6401dff5942e6)] -> css selector: #main]])
+17:22:15.688 INFO - Done: [get text: 3 [[ChromeDriver: chrome on MAC (4ed37ec0fb630d3bafc6401dff5942e6)] -> css selector: #main]]
+17:22:15.696 INFO - Executing: [delete session: 55f243bf-149c-43dc-b47a-ec9d660a81b0])
+17:22:16.624 INFO - Done: [delete session: 55f243bf-149c-43dc-b47a-ec9d660a81b0]

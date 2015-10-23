@@ -3,6 +3,7 @@ var cheerio = require('cheerio');
 var request = require('request');
 var router = require('express').Router();
 var Promise = require('bluebird');
+var open = require('open');
 module.exports = router;
 
 router.post('/', function (req, res, next) {
@@ -12,37 +13,34 @@ router.post('/', function (req, res, next) {
 
 			var $ = cheerio.load(html)
 
-			var title, release, rating;
-			var json = {
-				title: '',
-				release: '',
-				rating: ''
+			var inputCount = 0
+
+			$('input').each(function (i, element) {
+				var style = element.attribs.style
+
+				if (!style) {
+					element.attribs['ng-model'] = 'value'
+				} else {
+					element.attribs.style += ";border-style: solid;border-color: red;"
+				}
+
+				element.attribs['ng-model'] = "projectInfo[" + i + "]"
+				inputCount = i
+			})
+
+			var renderFields = {
+				inputCount: inputCount,
+				html: $.html()
 			}
 
-			$('.header').filter(function() {
-
-				var data = $(this)
-
-				title = data.children().first().text()
-
-				release = data.children().last().children().text()
-
-				json.title = title
-
-				json.release = release
-
-			})
-
-			$('.star-box-giga-star').filter(function () {
-				var data = $(this);
-
-				rating = data.text();
-
-				json.rating = rating
-			})
-
-			res.json(json)
+			res.json(renderFields)
 		}
 	})
 
-});
+})
+
+router.post('/populate', function (req, res, next) {
+	window.open("http://www.google.com")
+	// open('http://www.google.com')
+	res.json('done')
+})
